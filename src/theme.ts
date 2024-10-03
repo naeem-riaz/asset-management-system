@@ -19,12 +19,14 @@ const theme = createTheme({
         },
         success: {
             main: '#2e7d32',
+
         },
         warning: {
-            main: '#ed6c02',
+            main: '#FF6B50',
         },
         info: {
-            main: '#0288d1',
+            main: '#03111E',
+
         },
     },
     typography: {
@@ -42,8 +44,20 @@ const theme = createTheme({
             fontSize: '20px',
             fontWeight: 500,
         },
+        h4: {
+            fontSize: '18px',
+            fontWeight: 600,
+        },
+        h5: {
+            fontSize: '16px',
+            fontWeight: 400,
+        },
         body1: {
-            fontSize: '1rem',
+            fontSize: '16px',
+            fontWeight: 400,
+        },
+        body2: {
+            fontSize: '12px',
             fontWeight: 400,
         },
         button: {
@@ -54,8 +68,8 @@ const theme = createTheme({
     breakpoints: {
         values: {
             xs: 0,        // 'mobile' breakpoint
-            sm: 640,      // 'tablet' breakpoint
-            md: 1024,     // 'laptop' breakpoint
+            sm: 500,      // 'tablet' breakpoint
+            md: 1020,     // 'laptop' breakpoint
             lg: 1200,     // 'desktop' breakpoint
             xl: 1536,
         },

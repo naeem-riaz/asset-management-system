@@ -1,3 +1,4 @@
+
 import SwapVertIcon from '@mui/icons-material/SwapVert';
 import {
     Box,
@@ -18,7 +19,7 @@ const buttonStyle = {
 };
 
 
-const FolderPage: React.FC = () => {
+const Document_Links: React.FC = () => {
     const headers = ['Name', 'Last Modified', 'Link', 'File Size'];
 
     const paginatedItems = [
@@ -109,7 +110,7 @@ const FolderPage: React.FC = () => {
                 }}
             >
                 <Typography variant="h3">
-                    Folders
+                    Document Links
                 </Typography>
                 <Box display="flex" gap="12px">
                     <Button
@@ -128,9 +129,9 @@ const FolderPage: React.FC = () => {
                     </Button>
                 </Box>
             </Box>
-            <ResponsiveTable headers={headers} paginatedItems={paginatedItems} />
+            <ResponsiveTable headers={headers} paginatedItems={paginatedItems} showMenu={true} />
         </>
     );
 };
 
-export default FolderPage;
+export default Document_Links;

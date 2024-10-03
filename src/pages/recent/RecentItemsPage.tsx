@@ -17,10 +17,11 @@ const buttonStyle = {
     padding: '8px',
 };
 
-
-const FolderPage: React.FC = () => {
+const RecentItemsTable: React.FC = () => {
+    // Define headers for the table
     const headers = ['Name', 'Last Modified', 'Link', 'File Size'];
 
+    // Define paginated items (mock data)
     const paginatedItems = [
         {
             id: 1,
@@ -92,6 +93,20 @@ const FolderPage: React.FC = () => {
             link: 'http://example.com/doc2',
             fileSize: '2.3 MB',
         },
+        {
+            id: 11,
+            name: 'Document 1',
+            lastModified: '2024-09-25',
+            link: 'http://example.com/doc1',
+            fileSize: '1.2 MB',
+        },
+        {
+            id: 12,
+            name: 'Document 2',
+            lastModified: '2024-09-26',
+            link: 'http://example.com/doc2',
+            fileSize: '2.3 MB',
+        },
     ];
 
     return (
@@ -109,7 +124,7 @@ const FolderPage: React.FC = () => {
                 }}
             >
                 <Typography variant="h3">
-                    Folders
+                    File Manager
                 </Typography>
                 <Box display="flex" gap="12px">
                     <Button
@@ -133,4 +148,4 @@ const FolderPage: React.FC = () => {
     );
 };
 
-export default FolderPage;
+export default RecentItemsTable;

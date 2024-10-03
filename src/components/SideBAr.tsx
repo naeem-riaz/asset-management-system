@@ -11,6 +11,7 @@ import {
     Add as AddIcon,
     GridViewOutlined as GridViewOutlinedIcon,
     Menu as MenuIcon,
+    Link as LinkSharpIcon,
 } from '@mui/icons-material';
 import {
     Button,
@@ -54,6 +55,7 @@ export default function Sidebar() {
     };
 
     const listItemStyles = (active: boolean) => ({
+
         backgroundColor: active ? '#0071EB' : 'transparent',
         borderRadius: '10px',
         color: active ? 'white' : 'inherit',
@@ -100,7 +102,7 @@ export default function Sidebar() {
             <Divider />
 
             <Box sx={{ display: 'flex', flexDirection: 'column', margin: '16px', gap: '12px' }}>
-                <Typography sx={{ fontWeight: '400', fontSize: '16px' }}>Overview</Typography>
+                <Typography variant="h5">Overview</Typography>
                 <ListItemButton
                     component={Link}
                     to="/dashboard"
@@ -116,7 +118,7 @@ export default function Sidebar() {
             <Divider />
 
             <List sx={{ margin: '16px', padding: 0 }}>
-                <Typography sx={{ fontWeight: '400', fontSize: '16px', paddingBottom: '12px' }}>File Manager</Typography>
+                <Typography variant="h5" sx={{ paddingBottom: '12px' }}>File Manager</Typography>
 
                 {[
                     { to: '/recent', text: 'Recent', icon: <RestoreOutlined /> },
@@ -144,7 +146,7 @@ export default function Sidebar() {
 
             {/* Settings Section */}
             <Box sx={{ margin: '16px', padding: 0 }}>
-                <Typography sx={{ fontWeight: '400', fontSize: '16px' }}>Settings</Typography>
+                <Typography variant="h5">Settings</Typography>
 
                 {/* Settings Button */}
                 <ListItemButton
@@ -176,6 +178,22 @@ export default function Sidebar() {
                                 <SettingsOutlined sx={{ ...iconStyles(activePath === '/profile') }} />
                             </ListItemIcon>
                             <ListItemText primary="Profile" />
+                        </ListItemButton>
+                        <ListItemButton
+                            component={Link}
+                            to="/document-links"
+                            sx={{
+                                alignItems: 'center',
+                                padding: '8px 12px',
+                                gap: '12px',
+                                ...listItemStyles(activePath === '/document-links'),
+                            }}
+                            onClick={() => handleLinkClick('/document-links')}
+                        >
+                            <ListItemIcon sx={{ minWidth: 0 }}>
+                                <LinkSharpIcon sx={{ ...iconStyles(activePath === '/document-links') }} />
+                            </ListItemIcon>
+                            <ListItemText primary="Document Links" />
                         </ListItemButton>
                     </List>
                 )}

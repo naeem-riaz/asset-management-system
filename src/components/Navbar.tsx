@@ -72,7 +72,8 @@ const Navbar: React.FC = () => {
                             borderRadius: "10px",
                             width: {
                                 xs: '100%',
-                                sm: 300,
+                                sm: 250,
+                                md: 300,
                             }
                         }}
                     >
