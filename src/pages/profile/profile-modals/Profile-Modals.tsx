@@ -20,6 +20,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ open, onClose }) => {
 
     const handleOpenEditModal = () => {
         setEditModalOpen(true);
+        onClose();
     };
 
     const handleCloseEditModal = () => {
@@ -28,6 +29,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ open, onClose }) => {
 
     const handleOpenChangePasswordModal = () => {
         setChangePasswordModalOpen(true);
+        onClose();
     };
 
     const handleCloseChangePasswordModal = () => {
@@ -36,6 +38,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ open, onClose }) => {
 
     return (
         <>
+            {/* Main Profile Modal */}
             <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth sx={{ borderRadius: "10px" }}>
                 <DialogContent sx={{ padding: 0, position: 'relative', borderRadius: "4px" }}>
                     <IconButton
@@ -146,8 +149,10 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ open, onClose }) => {
                 </DialogContent>
             </Dialog>
 
-            {/* Separate modals for editing profile and changing password */}
+            {/* Edit Profile Modal */}
             <ProfileEditModal open={isEditModalOpen} onClose={handleCloseEditModal} />
+
+            {/* Change Password Modal */}
             <ChangePasswordModal open={isChangePasswordModalOpen} onClose={handleCloseChangePasswordModal} />
         </>
     );

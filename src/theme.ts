@@ -34,7 +34,7 @@ const theme = createTheme({
         h1: {
             fontSize: '2.5rem',
             fontWeight: 600,
-            color: '#FF0000',
+            // color: '#FF0000',
         },
         h2: {
             fontSize: '24px',

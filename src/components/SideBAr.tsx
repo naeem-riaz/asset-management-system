@@ -105,11 +105,11 @@ export default function Sidebar() {
                 <Typography variant="h5">Overview</Typography>
                 <ListItemButton
                     component={Link}
-                    to="/dashboard"
-                    sx={{ alignItems: 'center', padding: '8px 12px', gap: '12px', ...listItemStyles(activePath === '/dashboard') }}
-                    onClick={() => handleLinkClick('/dashboard')}
+                    to="/"
+                    sx={{ alignItems: 'center', padding: '8px 12px', gap: '12px', ...listItemStyles(activePath === '/') }}
+                    onClick={() => handleLinkClick('/')}
                 >
-                    <ListItemIcon sx={{ minWidth: 0, ...iconStyles(activePath === '/dashboard') }}>
+                    <ListItemIcon sx={{ minWidth: 0, ...iconStyles(activePath === '/') }}>
                         <GridViewOutlinedIcon />
                     </ListItemIcon>
                     <ListItemText primary="Dashboard" />
@@ -283,4 +283,3 @@ export default function Sidebar() {
         </Box>
     );
 }
-

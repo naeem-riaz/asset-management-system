@@ -1,7 +1,8 @@
 import { Avatar, Box, Button, Typography } from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 import { useState } from "react";
-import ProfileModal from "./profile-modals/profile-Modals";
+import ProfileModal from "./profile-modals/Profile-Modals";
+
 
 
 export default function ProfilePage() {

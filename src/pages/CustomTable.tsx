@@ -1,6 +1,5 @@
 import {
-    MoreVert as MoreVertIcon,
-    PersonAddAltOutlined as PersonAddAltOutlinedIcon
+    MoreVert as MoreVertIcon
 } from '@mui/icons-material';
 import {
     Box,
@@ -16,8 +15,9 @@ import {
     useTheme
 } from '@mui/material';
 import React, { useState } from 'react';
-import PaginationRounded from './Pagination';
+import Test from '../Test';
 import PositionedMenu from './MenuList';
+import PaginationRounded from './Pagination';
 
 
 interface Item {
@@ -174,18 +174,10 @@ const ResponsiveTable: React.FC<ResponsiveTableProps> = ({ headers, paginatedIte
                                                         position: 'absolute',
                                                         right: '45px',
                                                         display: "flex",
+                                                        visibility: hoveredRow === item.id ? 'visible' : 'hidden',
                                                     }}
                                                 >
-                                                    <IconButton
-                                                        size="small"
-                                                        style={{
-                                                            visibility: hoveredRow === item.id ? 'visible' : 'hidden',
-                                                            borderRadius: "4px 0",
-                                                            color: '#03111E'
-                                                        }}
-                                                    >
-                                                        <PersonAddAltOutlinedIcon fontSize="small" />
-                                                    </IconButton>
+                                                    <Test />
                                                 </Box>
                                                 <Tooltip title="More">
                                                     <IconButton
